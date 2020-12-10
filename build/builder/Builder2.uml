@@ -1,0 +1,36 @@
+@startuml
+class MealBuilder
+class Meal
+interface Item
+
+abstract Burger
+class VegBurger
+class ChickenBurger
+
+abstract ColdDrink
+class CocaColaCoke
+class PepsiCake
+
+interface Packing
+class Wraper
+class Bottle
+
+Item <|.. Burger
+Burger <|-- VegBurger
+Burger <|-- ChickenBurger
+Wraper *-- Burger :使用
+
+Item <|.. ColdDrink
+ColdDrink <|-- CocaColaCoke
+ColdDrink <|-- PepsiCake
+Bottle *-- ColdDrink : 使用
+
+Packing <|.. Wraper
+Packing <|.. Bottle
+
+Meal *-- MealBuilder : 创建
+Item *-- Meal : 使用
+
+
+
+@enduml
