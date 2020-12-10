@@ -96,7 +96,7 @@ class Meal {
     private $Items;
 
     // 添加食品饮料
-    public function addItem($item){
+    public function addItem(Item $item){
         $this->Items[] = $item;
     }
 

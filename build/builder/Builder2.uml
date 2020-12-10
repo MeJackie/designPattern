@@ -18,18 +18,18 @@ class Bottle
 Item <|.. Burger
 Burger <|-- VegBurger
 Burger <|-- ChickenBurger
-Wraper *-- Burger :使用
+Wraper <-- Burger :使用
 
 Item <|.. ColdDrink
 ColdDrink <|-- CocaColaCoke
 ColdDrink <|-- PepsiCake
-Bottle *-- ColdDrink : 使用
+Bottle <-- ColdDrink : 使用
 
 Packing <|.. Wraper
 Packing <|.. Bottle
 
-Meal *-- MealBuilder : 创建
-Item *-- Meal : 使用
+Meal <-- MealBuilder : 创建
+Item <-- Meal : 使用
 
 
 
