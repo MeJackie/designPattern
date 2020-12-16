@@ -76,6 +76,7 @@ class Chain{
 }
 
 $chain = (new Chain())->getChainOfLogger();
+var_dump($chain);exit;
 $chain->logMessage(AbstractLogger::$info, 'info');
 $chain->logMessage(AbstractLogger::$debug, 'debug');
 $chain->logMessage(AbstractLogger::$error, 'error');
